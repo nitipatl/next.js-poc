@@ -38,7 +38,7 @@ const Index = (props) => (
 
         a {
             text-decoration: none;
-            color: blue;
+            color: red;
         }
 
         a:hover {
