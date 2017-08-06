@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "name": "next.js-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitipatl/next.js-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitipatl/next.js-poc/issues"
+  },
+  "homepage": "https://github.com/nitipatl/next.js-poc#readme",
+  "description": "",
+  "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
+    "koa": "^2.3.0",
+    "next": "^2.4.9",
+    "next-routes": "^1.0.40",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {}
+}
