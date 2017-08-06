@@ -1,50 +1,15 @@
 import Layout from '../app/components/Layout'
-import Link from 'next/link'
+import PostLink from '../app/components/PostLink'
 import fetch from 'isomorphic-unfetch'
-
-const PostLink = (props) => (
-  <li>
-    <Link as={`/post/${props.id}`} href={`/post?title=${props.title}`}>
-      <a>{props.title}</a>
-    </Link>
-  </li>
-)
 
 const Index = (props) => (
     <Layout>
         <h1>My Blog</h1>
         <ul>
         {props.shows.map(({show}) => (
-            <li key={show.id}>
-            <Link as={`/post/${show.id}`} href={`/post?id=${show.id}`}>
-                <a>{show.name}</a>
-            </Link>
-            </li>
+            <PostLink key={show.id} post={show} />
         ))}
         </ul>
-        <style jsx>{`
-        h1, a {
-            font-family: "Arial";
-        }
-
-        ul {
-            padding: 0;
-        }
-
-        li {
-            list-style: none;
-            margin: 5px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: red;
-        }
-
-        a:hover {
-            opacity: 0.6;
-        }
-        `}</style>
     </Layout>
 )
 
