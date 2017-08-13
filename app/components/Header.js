@@ -6,7 +6,7 @@ const linkStyle = {
 
 const Header = (props) => (
     <div>
-        <h1>{props.title}</h1>
+        <h2>{props.title}</h2>
         <hr />
         <Link href="/">
           <a style={linkStyle}>Home</a>
