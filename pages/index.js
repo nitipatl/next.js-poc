@@ -1,12 +1,12 @@
 import Layout from '../app/components/Layout'
 import PostLink from '../app/components/PostLink'
-import fetch from 'isomorphic-unfetch'
+import { getMovies } from '../app/remote-apis/movie'
 
 const Index = (props) => (
     <Layout>
         <h1>My Blog</h1>
         <ul>
-        {props.shows.map(({show}) => (
+        {props.shows && props.shows.map(({show}) => (
             <PostLink key={show.id} post={show} />
         ))}
         </ul>
@@ -14,12 +14,8 @@ const Index = (props) => (
 )
 
 Index.getInitialProps = async () => {
-  const res = await fetch(`https://api.tvmaze.com/search/shows?q=batman`)
-  const data = await res.json()
-  return {
-    shows: data
-  }
+    const shows = await getMovies('batman')
+    return { shows }
 }
-
 
 export default Index

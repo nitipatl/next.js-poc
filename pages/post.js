@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Layout from '../app/components/Layout'
-import fetch from 'isomorphic-unfetch'
+import { getMovieById } from '../app/remote-apis/movie'
 
 
 // class Content extends Component {
@@ -35,12 +35,8 @@ const Content2 = (props) =>(
 )
 Content2.getInitialProps = async (ctx) => {
     const { id } = ctx.query
-    const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-    const show = await res.json()
-    return {
-        id,
-        show
-    }
+    const show = await getMovieById(id)
+    return { id, show }
 }
 
 // export default Content
