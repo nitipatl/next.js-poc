@@ -3,7 +3,9 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "name": "next.js-poc",
   "version": "1.0.0",
@@ -44,6 +46,7 @@
     "jest": "^20.0.4",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.6.1",
-    "babel-jest": "^20.0.3"
+    "babel-jest": "^20.0.3",
+    "@storybook/react": "^3.2.4"
   }
 }
