@@ -5,6 +5,7 @@
 * [x] Setup kao + next.js
 * [x] Call async API (getInitialProps)
 * [x] Call grpahQL API (Apollo + redux pattern?)
+* [x] Move call grpahQL API to remote-apis
 * [ ] Testing with Storybook
 * [ ] UI testing with Robotframwork
 * [ ] UI testing with Jest (Snapshot testing)
