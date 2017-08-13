@@ -9,7 +9,7 @@
 * [ ] Testing with Storybook
 * [ ] UI testing with Robotframwork
 * [ ] UI testing with Jest (Snapshot testing)
-* [ ] Unit testing 
+* [x] Unit testing / Component testing
 * [ ] Integation testing
 
 ## Jest
