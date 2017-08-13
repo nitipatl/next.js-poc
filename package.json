@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/addon-storyshots": "^3.2.4",
     "@storybook/react": "^3.2.4",
     "babel-jest": "^20.0.3",
     "enzyme": "^2.8.2",
