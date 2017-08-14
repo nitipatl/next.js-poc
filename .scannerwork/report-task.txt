@@ -1,0 +1,5 @@
+projectKey=testproject-react
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/testproject-react
+ceTaskId=AV3hHd8EysTQXX_VXuBc
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV3hHd8EysTQXX_VXuBc
