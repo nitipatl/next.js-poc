@@ -6,49 +6,10 @@ exports[`Storyshots Layout Header 1`] = `
     ทดสอบ
   </h2>
   <hr />
-  <a
+  <Link
     href="/"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginRight": 15,
-      }
-    }
   >
-    Home
-  </a>
-  <a
-    href="/about"
-    onClick={[Function]}
-    style={
-      Object {
-        "marginRight": 15,
-      }
-    }
-  >
-    About
-  </a>
-</div>
-`;
-
-exports[`Storyshots Layout Index 1`] = `
-<div
-  style={
-    Object {
-      "border": "1px solid #DDD",
-      "margin": 20,
-      "padding": 20,
-    }
-  }
->
-  <div>
-    <h2>
-      Movie
-    </h2>
-    <hr />
     <a
-      href="/"
-      onClick={[Function]}
       style={
         Object {
           "marginRight": 15,
@@ -57,9 +18,11 @@ exports[`Storyshots Layout Index 1`] = `
     >
       Home
     </a>
+  </Link>
+  <Link
+    href="/about"
+  >
     <a
-      href="/about"
-      onClick={[Function]}
       style={
         Object {
           "marginRight": 15,
@@ -68,33 +31,32 @@ exports[`Storyshots Layout Index 1`] = `
     >
       About
     </a>
-  </div>
+  </Link>
+</div>
+`;
+
+exports[`Storyshots Layout Index 1`] = `
+<Layout>
   <h1>
     My Blog
   </h1>
   <ul>
-    <li
-      data-jsx={1528442980}
-    >
-      <a
-        data-jsx={1528442980}
-        href="/post/1"
-        onClick={[Function]}
-      >
-        test
-      </a>
-    </li>
-    <li
-      data-jsx={1528442980}
-    >
-      <a
-        data-jsx={1528442980}
-        href="/post/2"
-        onClick={[Function]}
-      >
-        test2
-      </a>
-    </li>
+    <PostLink
+      post={
+        Object {
+          "id": 1,
+          "name": "test",
+        }
+      }
+    />
+    <PostLink
+      post={
+        Object {
+          "id": 2,
+          "name": "test2",
+        }
+      }
+    />
   </ul>
-</div>
+</Layout>
 `;
