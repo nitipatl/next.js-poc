@@ -4,12 +4,12 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import rootReducer from './app/reducers'
 
 const defaultState = fromJS({
-    domain: {}
+  domain: {}
 })  
 
 export default (initialState = defaultState) => {
-    if (!Map.isMap(initialState))
-        initialState = fromJS(initialState)
+  if (!Map.isMap(initialState))
+    initialState = fromJS(initialState)
 
-    return createStore(rootReducer, initialState, devToolsEnhancer())
+  return createStore(rootReducer, initialState, devToolsEnhancer())
 }

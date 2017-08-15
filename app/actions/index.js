@@ -3,7 +3,7 @@ import { customerSchema } from '../entities'
 import { updateEntities } from './entities'
 
 export const setCustomer = (customer) => {
-    return updateEntities(normalize(customer, customerSchema))
+  return updateEntities(normalize(customer, customerSchema))
 }
 
 export * from './entities'

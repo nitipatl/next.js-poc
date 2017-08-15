@@ -5,16 +5,16 @@ const linkStyle = {
 }
 
 const Header = (props) => (
-    <div>
-        <h2>{props.title}</h2>
-        <hr />
-        <Link href="/">
-          <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/about">
-          <a style={linkStyle}>About</a>
-        </Link>
-    </div>
+  <div>
+    <h2>{props.title}</h2>
+    <hr />
+    <Link href="/">
+      <a style={linkStyle}>Home</a>
+    </Link>
+    <Link href="/about">
+      <a style={linkStyle}>About</a>
+    </Link>
+  </div>
 )
 
 export default Header

@@ -7,7 +7,7 @@ it('Header should show correct', () => {
     <Header title="Hello" />
   ).toJSON()
   expect(tree).toMatchSnapshot()
-});
+})
 
 it('Header should show correct (shallow)', () => {
   const renderer = new shallowRenderer
@@ -15,4 +15,4 @@ it('Header should show correct (shallow)', () => {
     <Header title="Hello" />
   )
   expect(snapshot).toMatchSnapshot()
-});
+})

@@ -8,12 +8,12 @@ import { selectorCustomer } from '../app/selectors'
 
 class CustomerPage extends Component {
     static contextTypes = {
-        api: PropTypes.any
+      api: PropTypes.any
     }
 
     static async getInitialProps({ api, store }) {
-        const { data } = await api.query({
-            query: gql`
+      const { data } = await api.query({
+        query: gql`
                 {
                     catShop {
                         name
@@ -25,25 +25,25 @@ class CustomerPage extends Component {
                     }
                 }
             `
-        })
+      })
 
-        store.dispatch(setCustomer({ ...data.catShop, id: '1' }))
+      store.dispatch(setCustomer({ ...data.catShop, id: '1' }))
     }
 
     render() {
-        const { customer, url } = this.props;
-        return (
-            <div>
-                {customer.name} {customer.address}
-                <ul>
-                    {customer.cats && customer.cats.map(v => (<li>{v.name}</li>))}
-                </ul>
-            </div>
-        )
+      const { customer, url } = this.props
+      return (
+        <div>
+          {customer.name} {customer.address}
+          <ul>
+            {customer.cats && customer.cats.map(v => (<li>{v.name}</li>))}
+          </ul>
+        </div>
+      )
     }
 
 }
 
 export default withRedux(createStructuredSelector({
-    customer: selectorCustomer('1')
+  customer: selectorCustomer('1')
 }))(CustomerPage)

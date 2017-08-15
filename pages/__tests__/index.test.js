@@ -12,7 +12,7 @@ it('Index should show correct', () => {
     <Index shows={shows} />
   ).toJSON()
   expect(tree).toMatchSnapshot()
-});
+})
 
 it('Index should show correct', () => {
   const renderer = new shallowRenderer
@@ -20,4 +20,4 @@ it('Index should show correct', () => {
     <Index shows={shows} />
   )
   expect(snapshot).toMatchSnapshot()
-});
+})

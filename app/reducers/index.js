@@ -3,9 +3,9 @@ import { fromJS } from 'immutable'
 import entitiesReducer from './entities'
 
 const defaultState = fromJS({
-    domain: {}
+  domain: {}
 })
 
 export default combineReducers({ 
-    domain: entitiesReducer
+  domain: entitiesReducer
 }, defaultState)

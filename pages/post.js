@@ -26,17 +26,17 @@ import { getMovieById } from '../app/remote-apis/movie'
 // }
 
 const Content2 = (props) =>(
-    <Layout>
-        {props.id}
-        <h1>{props.show.name}</h1>
-        <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-        <img src={props.show.image.medium}/>
-    </Layout>
+  <Layout>
+    {props.id}
+    <h1>{props.show.name}</h1>
+    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+    <img src={props.show.image.medium}/>
+  </Layout>
 )
 Content2.getInitialProps = async (ctx) => {
-    const { id } = ctx.query
-    const show = await getMovieById(id)
-    return { id, show }
+  const { id } = ctx.query
+  const show = await getMovieById(id)
+  return { id, show }
 }
 
 // export default Content
